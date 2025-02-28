@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;   
+}
+
+html {
+    scroll-behavior: smooth;
+    /* to set the default font size to 10px --> useful to work with rem units (2rem <=>2Opx) */
+    font-size: 62.5%;
+}
+:root {
+    --text-color: #0A044F;
+    --text-highlight-color: rgba(219, 14, 219, 0.75);
+    --button-text-purple-color: rgba(127, 0, 127, 0.95);
+    
+}
+.navbar {
+    /*to make sure it's on top of everything : big z-index*/
+    z-index: 1000; 
+    width: 100%;
+    height: 5rem;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid white;
+}
+.navbar ul {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+li a {
+    color:inherit;
+    text-decoration: none;
+}
+.navbar li {
+    list-style-type: none;
+    color:var(--text-highlight-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    border: 1px solid transparent;
+    transition: background 0.3s ease;
+
+}
+.navbar li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow:auto;
+    color: var(--text-color);
+    background: radial-gradient(
+        circle,
+        #e2f7bf,
+        #cbf0e3 30%,
+        #c6ecdf 60%,
+        #f1d4e1 100%
+    );
+}
+main{
+    display: grid;
+    
+}
+
+.heading-container {
+    width: 80%;
+    background : rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    box-shadow : 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter : blur(10px);
+    border: 1px solid transparent;
+    /*to center the container*/
+    position: relative; 
+    left: 10%; 
+}
+.heading {
+    margin: 2rem 0 3rem 0;
+    display: grid;
+    /*padding-bottom: 2rem;*/
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+h1{
+    margin: 1rem 0 0 0;
+    padding: auto;
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: bold;
+    
+}
+h2 {
+    margin: 1.5rem 0 0 0;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: rgba(127, 0, 127,O.5);
+
+}
+/* border created initialy to visualize how to place the content*/
+.about, .contact, .work {
+    border: 1px solid transparent;
+    /*margin-bottom: 2rem;
+    margin-top: 2rem;*/
+}
+
+.about-title, .contact-title, .work-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--text-color);
+    margin: 1.3rem 0;
+}
+.highlight {
+    color: var(--text-highlight-color);
+}
+p{
+    font-size: 1.5rem;
+    margin: auto auto;
+    text-align: center;
+}
+.about-text-resume{
+    margin-bottom: 2rem;
+}
+
+#resume {
+    display: inline-block;
+    padding: 1rem 2rem; 
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: var(--button-text-purple-color);
+    text-decoration: none; 
+    font-size: 1.5rem;
+    font-weight: 600; 
+    transition: background 0.3s ease;
+  }
+
+#resume:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+#resume:active{
+    background: rgba(255, 255, 255, 0.1); 
+    transform: scale(0.95);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    justify-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    
+}
+.linked-in {
+  display: inline-block; 
+  padding: 1rem 2rem; 
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  color: var(--button-text-purple-color); 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: background 0.3s ease; 
+}
+    
+
+.linked-in:hover{
+    background: rgba(255, 255, 255, 0.4);
+
+}
+.linked-in:active {
+    background: rgba(255, 255, 255, 0.1); 
+    transform: scale(0.95); 
+}
+
+.mail {
+    display: inline-block; 
+    padding: 1rem 2rem; 
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--button-text-purple-color); 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: background 0.3s ease; 
+}
+
+.mail:hover {
+    background: rgba(255, 255, 255, 0.4); 
+}
+.mail:active {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+}
+
+.mastodon {
+    display: inline-block; 
+    padding: 1rem 2rem; 
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--button-text-purple-color); 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: background 0.3s ease; 
+}
+.mastodon:hover {
+    background: rgba(255, 255, 255, 0.4); 
+}
+.mastodon:active {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+}
+
+#efp {
+    text-decoration: none;
+    color: var(--button-text-purple-color);
+}
+
+#chateau-de-verre {
+    margin: 1rem auto;
+    text-decoration: none;
+    align-content: center;
+    color: var(--button-text-purple-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    border: 1px solid transparent;
+    transition: background 0.3s ease;
+    align-content: center;
+
+}
+#chateau-de-verre:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+img {
+    max-width: max(250px, 25vw);
+    border-radius: 5%;
+}
+.chateau-de-verre-images {
+    margin: auto;
+    max-width: max-content ;
+    display: flex;
+    justify-content: center;
+    gap: 3rem; 
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    justify-content: space-evenly;
+    /*padding-bottom: 1.5rem;*/
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    padding: 1rem 0 1rem 0;
+    border-top: 1px solid white;
+}
+.footer-text {
+    font-style: normal;
+    
+}
